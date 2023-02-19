@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App" data-theme={dark ? "dark" : "light"}>
       <Nav handleTheme={handleTheme}></Nav>
-      <div className='px-16'>
+      <div className='lg:px-16 px-8'>
         <Home></Home>
       </div>
     </div>

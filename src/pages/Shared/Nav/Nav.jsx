@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Nav = ({ handleTheme }) => {
   return (
-    <nav className=" relative   ">
+    <nav className=" sticky top-0  z-[1] ">
       <div className="navbar fixed top-0 bg-accent backdrop-blur-xl bg-white/10 shadow-lg">
         <h3 className="btn  btn-ghost mr-2">Logo </h3>
         <div className="form-control">
@@ -10,11 +10,10 @@ const Nav = ({ handleTheme }) => {
             type="text"
             placeholder="Search"
             className="input input-bordered input-sm"
-           
           />
         </div>
-        <div className="flex-1 justify-center">
-          <div className="">
+        <div className="flex-1  justify-center ">
+          <div className="md:block hidden">
             <a className="btn btn-ghost normal-case text-xl">Media </a>
             <a className="btn btn-ghost normal-case text-xl">Message</a>
             <a className="btn btn-ghost normal-case text-xl">About</a>

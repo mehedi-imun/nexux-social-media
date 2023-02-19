@@ -73,16 +73,16 @@ const Post = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-around mt-3">
-        <div className=" ">
+      <div className="flex justify-around">
+        <div className=" btn btn-ghost">
           <label htmlFor="my-modal">
             <BiImageAdd className="cursor-pointer"></BiImageAdd>
           </label>
         </div>
-        <div>
+        <div className="btn btn-ghost">
           <MdOutlineVideoLibrary></MdOutlineVideoLibrary>
         </div>
-        <div>
+        <div className="btn btn-ghost">
           <MdArticle></MdArticle>
         </div>
       </div>
