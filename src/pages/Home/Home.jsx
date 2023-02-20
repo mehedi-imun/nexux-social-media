@@ -5,7 +5,7 @@ import Post from "./Post";
 
 const Home = () => {
   return (
-    <div className=" pt-6 grid lg:grid-cols-9 md:grid-cols-3 grid-cols-1  gap-6 container mx-auto  pb-96 ">
+    <div className=" pt-6 grid lg:grid-cols-9 md:grid-cols-3 grid-cols-1  gap-6 container mx-auto  pb-96 lg:px-16 px-8">
       <div className="lg:col-span-2 md:col-span-1 col-span-9 bg-accent lg:h-96 h-full rounded-md ">
         <div className=" ">
           <img

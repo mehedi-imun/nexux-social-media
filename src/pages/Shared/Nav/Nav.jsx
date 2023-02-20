@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../../assets/Logo/logo.png"
+import { MdWork } from "react-icons/md";
+import { ImHome } from "react-icons/im";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { MdNotifications } from "react-icons/md";
+import { RiMessage2Fill } from "react-icons/ri";
 const Nav = ({ handleTheme }) => {
+  const navigate = useNavigate()
   
   return (
     <nav className=" container mx-auto sticky top-0  z-[1] ">
       <div className="navbar lg:px-16 px-8 bg-accent backdrop-blur-xl bg-white/10 shadow-lg">
-        <img className="w-12 mr-6" src={logo} alt="" />
+        <img
+          onClick={() => navigate("/")}
+          className="lg:w-12 w-9 lg:mr-6 cursor-pointer"
+          src={logo}
+          alt=""
+        />
         <div className="form-control">
           <input
             type="text"
@@ -13,11 +25,59 @@ const Nav = ({ handleTheme }) => {
             className="input input-bordered input-sm hidden lg:block"
           />
         </div>
-        <div className="flex-1  justify-center ">
-          <div className="md:block hidden">
-            <a className="btn btn-ghost normal-case text-xl">Media </a>
-            <a className="btn btn-ghost normal-case text-xl">Message</a>
-            <a className="btn btn-ghost normal-case text-xl">About</a>
+        <div className="flex-1 justify-center  ">
+          <div className=" text-secondary ">
+            <Link
+              to="/"
+              className="btn btn-ghost normal-case lg:text-2xl text-xl"
+            >
+              <ImHome></ImHome>
+              <small className=" lg:block hidden btn-block text-sm font-normal">
+                {" "}
+                home
+              </small>
+            </Link>
+
+            <Link
+              to="#"
+              className="btn btn-ghost normal-case lg:text-2xl text-xl"
+            >
+              <MdWork />
+              <small className=" lg:block hidden btn-block text-sm font-normal">
+                {" "}
+                Job
+              </small>
+            </Link>
+            <Link
+              to="#"
+              className="btn btn-ghost normal-case lg:text-2xl text-xl"
+            >
+              <BsFillPeopleFill />
+              <small className=" lg:block hidden btn-block text-sm font-normal">
+                {" "}
+                People
+              </small>
+            </Link>
+            <Link
+              to="#"
+              className="btn btn-ghost normal-case lg:text-2xl text-xl"
+            >
+              <MdNotifications />
+              <small className=" lg:block hidden btn-block text-sm font-normal">
+                {" "}
+                Notifications
+              </small>
+            </Link>
+            <Link
+              to="#"
+              className="btn btn-ghost normal-case lg:text-2xl text-xl"
+            >
+              <RiMessage2Fill />
+              <small className=" lg:block hidden  btn-block text-sm font-normal">
+                {" "}
+                Message
+              </small>
+            </Link>
           </div>
         </div>
         <div className="flex-none gap-2">
@@ -32,10 +92,10 @@ const Nav = ({ handleTheme }) => {
               className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
+                <Link to="/my-profile" className="justify-between">
                   Profile
                   <span className="badge">New</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a>Settings</a>
