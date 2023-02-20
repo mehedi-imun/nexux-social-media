@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import NewsFeedCard from "./NewsFeedCard";
 
-const style = {
-//   height: 30,
-  border: "1px solid green",
-  margin: 6,
-  padding: 8,
-};
 
 const NewsFeed = () => {
   const [items, setItems] = useState([]);
@@ -46,7 +41,7 @@ const NewsFeed = () => {
         next={fetchMoreData}
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
-        height={400}
+        height={600}
         endMessage={
           <p style={{ textAlign: "center" }}>
             <b>Yay! You have seen it all</b>
@@ -54,14 +49,11 @@ const NewsFeed = () => {
         }
       >
         {items.map((item, index) => (
-          <div
-            className=" shadow-lg h-80 scrollbar-hidden"
-            style={style}
+          <NewsFeedCard
             key={index}
+            item={item}
           >
-            <h2>{item.title}</h2>
-            <p>{item.body}</p>
-          </div>
+          </NewsFeedCard>
         ))}
       </InfiniteScroll>
     </div>

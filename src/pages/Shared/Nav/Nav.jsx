@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-
+import logo from "../../../assets/Logo/logo.png"
 const Nav = ({ handleTheme }) => {
+  
   return (
-    <nav className=" sticky top-0  z-[1] ">
-      <div className="navbar fixed top-0 bg-accent backdrop-blur-xl bg-white/10 shadow-lg">
-        <h3 className="btn  btn-ghost mr-2">Logo </h3>
+    <nav className=" container mx-auto sticky top-0  z-[1] ">
+      <div className="navbar lg:px-16 px-8 bg-accent backdrop-blur-xl bg-white/10 shadow-lg">
+        <img className="w-12 mr-6" src={logo} alt="" />
         <div className="form-control">
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered input-sm"
+            className="input input-bordered input-sm hidden lg:block"
           />
         </div>
         <div className="flex-1  justify-center ">
@@ -23,7 +24,7 @@ const Nav = ({ handleTheme }) => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
               </div>
             </label>
             <ul

@@ -21,8 +21,8 @@ const Post = () => {
         console.log(image);
     }
   return (
-    <div>
-      <div className="w-full flex px-4 gap-4 mt-6">
+    <div className=" ">
+      <div className="w-full flex px-4 gap-4 mt-6 ">
         <div className="avatar ">
           <div className="w-16 rounded-full border border-accent ">
             <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
