@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewsFeedCard = ({ item }) => {
+const MyPostCard = ({ item }) => {
   return (
     <div className=" shadow-lg lg:h-full scrollbar-hidden bg-accent rounded-md mb-6">
       <div className="">
@@ -8,7 +8,7 @@ const NewsFeedCard = ({ item }) => {
           <div className="w-16 rounded-full border border-accent ">
             <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
           </div>
-          <h3 className="ml-2 ">Mehedi imun</h3>
+          <h3 className="ml-2 ">Profile Name</h3>
         </div>
         <div className="">
           <p className="px-5 py-2 text-justify">
@@ -33,4 +33,4 @@ const NewsFeedCard = ({ item }) => {
   );
 };
 
-export default NewsFeedCard;
+export default MyPostCard;

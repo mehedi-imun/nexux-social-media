@@ -62,7 +62,7 @@ const Nav = ({ handleTheme }) => {
                 People
               </small>
             </Link>
-            <Link
+            {user?            <Link
               to="#"
               className="btn btn-ghost normal-case lg:text-2xl text-xl"
             >
@@ -71,17 +71,21 @@ const Nav = ({ handleTheme }) => {
                 {" "}
                 Notifications
               </small>
-            </Link>
-            <Link
-              to="#"
-              className="btn btn-ghost normal-case lg:text-2xl text-xl"
-            >
-              <RiMessage2Fill />
-              <small className=" lg:block hidden  btn-block text-sm font-normal">
-                {" "}
-                Message
-              </small>
-            </Link>
+            </Link>:"" }
+            {user ? (
+              <Link
+                to="#"
+                className="btn btn-ghost normal-case lg:text-2xl text-xl"
+              >
+                <RiMessage2Fill />
+                <small className=" lg:block hidden  btn-block text-sm font-normal">
+                  {" "}
+                  Message
+                </small>
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         <div className="flex-none gap-2">
@@ -133,12 +137,17 @@ const Nav = ({ handleTheme }) => {
                 </li>
 
                 <li>
-                  <a  onClick={() => signOut(auth)}>Logout</a>
+                  <a onClick={() => signOut(auth)}>Logout</a>
                 </li>
               </ul>
             </div>
           ) : (
-            <button onClick={()=>navigate('/login')} className='btn btn-primary'>Login</button>
+            <button
+              onClick={() => navigate("/login")}
+              className="btn btn-primary"
+            >
+              Login
+            </button>
           )}
         </div>
       </div>

@@ -21,6 +21,9 @@ const Login = () => {
     if (loading) {
         return <p>Loading...</p>
     }
+    if (user) {
+        navigate('/')
+    }
     const handleLogin = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;

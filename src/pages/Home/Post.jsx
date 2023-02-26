@@ -38,11 +38,14 @@ const Post = () => {
 
         {/* modal for post */}
         <input type="checkbox" id="my-modal" className="modal-toggle" />
-        <div className="modal ">
-          <div className="modal-box absolute top-16 bg-accent">
+        <div className="modal backdrop-blur-sm bg-black/40">
+          <div className="modal-box absolute top-16 bg-accent ">
             <div className="flex justify-between">
               <h3 className="font-bold text-lg  ">Create Post</h3>
-              <label htmlFor="my-modal" className="cursor-pointer">
+              <label
+                htmlFor="my-modal"
+                className="btn btn-sm btn-circle btn-primary"
+              >
                 X
               </label>
             </div>

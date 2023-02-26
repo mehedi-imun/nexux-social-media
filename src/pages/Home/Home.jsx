@@ -19,8 +19,8 @@ const Home = () => {
             </div>
           </div>
           <div className="my-12 text-center">
-            <h3>name</h3>
-            <h3>desegnetion</h3>
+            <h3>Mehedi imun</h3>
+            <h3>Jr Full Stack Web Developer</h3>
           </div>
           <hr />
         </div>
